@@ -1,8 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const loadFile = (request, response, dirPath, contentType) => {
-  const file = path.resolve(__dirname, dirPath);
+const fileStats = (file, request, response, contentType) => {
   fs.stat(file, (err, stats) => {
     if (err) {
       if (err.code === 'ENOENT') {
@@ -43,6 +42,11 @@ const loadFile = (request, response, dirPath, contentType) => {
     });
     return stream;
   });
+};
+
+const loadFile = (request, response, dirPath, contentType) => {
+  const file = path.resolve(__dirname, dirPath);
+  fileStats(file, request, response, contentType);
 };
 
 const getParty = (request, response) => {
