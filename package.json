@@ -1,0 +1,31 @@
+{
+  "name": "streaming-media-assignment",
+  "version": "1.0.0",
+  "engines": {
+    "node": "14.15.4",
+    "npm": "6.14.10"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Tests complete\"",
+    "start": "node ./src/server.js",
+    "pretest": "eslint ./src --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoriMori/streaming-media-assignment.git"
+  },
+  "keywords": [],
+  "author": "Cori Mori",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CoriMori/streaming-media-assignment/issues"
+  },
+  "homepage": "https://github.com/CoriMori/streaming-media-assignment#readme",
+  "devDependencies": {
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}
